@@ -1,0 +1,98 @@
+.cardsFolder {
+    list-style: none;
+    padding: 0;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+
+.card {
+    background: rgba(30, 30, 30);
+    width: 160px;
+    aspect-ratio: 3 / 4;
+    border-radius: 16px;
+    box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.1);
+    
+    position: relative; 
+    overflow: hidden;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    cursor: default;
+    
+    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.cardLabel, .cardIcon {
+    position: relative;
+    z-index: 2;
+
+    color: white;
+    text-align: center;
+}
+
+.cardLabel {
+    font-family: 'TiltNeon', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cardIcon {
+    font-size: 96px;
+
+    display: flex;
+}
+
+.card::before {
+    content: "";
+    background: var(--hover-color, rgba(50, 50, 50, 0.75));
+    height: 100%;
+    width: 100%;
+    transform: scaleX(0);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    
+    transform-origin: left;
+    transition: transform 0.25s ease;
+}
+
+.card:not(.staticCard):hover::before {
+    transform: scaleX(1);
+}
+
+.cardsFolder:has(.card:not(.staticCard):hover) {
+    transform: translateX(-64px); 
+}
+
+.card:not(.staticCard):hover {
+    transform: translateX(128px) scale(1.1);
+    box-shadow: 0 0 24px 4px rgba(0,0,0,0.25);
+}
+
+.card:not(.staticCard):hover ~ .card:not(.staticCard) {
+    transform: translateX(128px);
+}
+
+
+.staticCard {
+    aspect-ratio: 1 / 1;
+    background-color: rgb(255, 0, 30, 0.9);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+
+    backdrop-filter: blur(8px);
+}
+
+.staticCard::before {
+    display: none;
+}

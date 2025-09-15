@@ -1,0 +1,70 @@
+.mainHeader {
+    background: rgba(255, 255, 255, 0.5);
+    height: 10vh;
+    width: 100%;
+
+    backdrop-filter: blur(10px);
+
+    position: fixed;
+    z-index: 9999;
+
+    font-family: TiltNeon;
+}
+
+.headerContent {
+    height: 100%;
+    max-width: 960px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.socialLinks {
+    display: flex;
+    gap: 16px;
+}
+
+.socialLinks a {
+    height: 24px;
+    aspect-ratio: 1 / 1;
+    border: 2px solid rgb(255, 0, 30);    
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.githubIcon {
+    background: rgb(255, 0, 30);
+    color: white;
+    font-size: 36px;
+}
+
+.linkedinIcon {
+    background: white;
+    color: rgb(255, 0, 30);
+    font-size: 16px;
+}
+
+.navLinks {
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    gap: 12px;
+}
+
+.navLinks li a {
+    color: rgb(255, 0, 30);
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.25s ease-in-out;
+}

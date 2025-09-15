@@ -1,0 +1,189 @@
+
+.decorCircles {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+/* estilo geral das bolhas */
+.decorCircles span {
+  position: absolute;
+  border-radius: 50%; /* vira bolha */
+  background: rgba(255, 0, 30); /* cor base vermelha translúcida */
+  filter: blur(16px); /* espalha a luz */
+  animation: float 5s ease-in-out infinite;
+}
+
+/* bolha 1 */
+.decorCircles span:nth-child(1) {
+  top: 10%;
+  right: 20%;
+  height: 180px;
+  aspect-ratio: 1 / 1;
+  background: rgba(255, 0, 30, 0.25);
+  animation-delay: 0s;
+}
+
+/* bolha 2 */
+.decorCircles span:nth-child(2) {
+  bottom: 0%;
+  right: 10%;
+  height: 200px;
+    aspect-ratio: 1 / 1;
+  background: rgba(255, 0, 30, 0.25);
+  animation-delay: 1.5s;
+}
+
+/* bolha 3 */
+.decorCircles span:nth-child(3) {
+  bottom: 2.5%;
+  right: 37.5%;
+    aspect-ratio: 1 / 1;
+  height: 100px;
+  background: rgba(255, 0, 30, 0.25);
+  animation-delay: 3s;
+}
+
+/* bolha 4 */
+.decorCircles span:nth-child(4) {
+  bottom: 0%;
+  right: 45%;
+    aspect-ratio: 1 / 1;
+  height: 150px;
+  background: rgba(255, 0, 30, 0.25);
+  animation-delay: 0.5s;
+}
+
+/* bolha 5 */
+.decorCircles span:nth-child(5) {
+  top: 25%;
+  right: 15%;
+    aspect-ratio: 1 / 1;
+  height: 100px;
+  background: rgba(255, 0, 30, 0.25);
+  animation-delay: 2.5s;
+}
+
+/* bolha 6 (pequena, como uma partícula) */
+.decorCircles span:nth-child(6) {
+  bottom: 25%;
+  right: 55%;
+    aspect-ratio: 1 / 1;
+  height: 50px;
+  background: rgba(255, 0, 30, 0.25);
+  animation-delay: 1s;
+}
+
+.decorCircles span:nth-child(7) {
+  top: 20%;
+  right: 45%;
+    aspect-ratio: 1 / 1;
+  height: 150px;
+  background: rgba(255, 0, 30, 0.25);
+  animation-delay: 2s;
+}
+
+/* animação de flutuar */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-100px) scale(1.5);
+  }
+}
+
+
+
+
+.sectionContent {
+    max-width: 960px;
+    padding: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.profile {
+    width: 25%;
+    margin: 0 auto;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    cursor: default;
+}
+
+.profilePhoto {
+    background: rgb(255, 0, 30);
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profilePhoto img {
+    aspect-ratio: 3 / 4;
+    width: 100%;
+    border-bottom-right-radius: 128px;
+    border-bottom-left-radius: 128px;
+    filter: drop-shadow(0 -2px 4px rgba(0, 0, 0, 0.5));
+
+    object-fit: cover;
+    object-position: top;
+
+    position: relative;
+    transform: translateY(-12.25%);
+}
+
+
+
+
+
+.profileContent {
+    max-width: 50%;
+    margin: 0 auto;
+
+    font-family: TiltNeon;
+}
+
+.profileContent h1 {
+    font-size: 32px;
+}
+
+.profileContent h2 {
+    font-size: 24px;
+}
+
+.profileContent h1, h2 {
+    margin: 0;
+
+    cursor: default;
+}
+
+.profileContent p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: justify;
+    overflow-wrap: break-word;
+    text-wrap: break-word;
+    hyphens: auto;
+
+    cursor: default;
+}
+
+.profileContent h1 span,
+.profileContent h2 span,
+.profileContent p span {
+    color: rgb(255, 0, 30);
+    text-wrap: nowrap;
+}

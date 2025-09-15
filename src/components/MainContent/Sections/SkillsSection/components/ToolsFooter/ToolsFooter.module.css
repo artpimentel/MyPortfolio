@@ -1,0 +1,125 @@
+.tools {
+    height: 33%;
+    width: 100%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    font-family: TiltNeon;
+}
+
+.optionsWrapper {
+    position: relative;
+}
+
+.toolsOptions {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+
+    position: relative;
+    z-index: 2;
+}
+
+.toolOption {
+    width: 96px;
+    padding: 12px 0;
+
+    color: black;
+    font-size: 16px;
+    text-align: center;
+
+    cursor: pointer;
+
+    transition: color 0.25s ease;
+}
+
+/* Estilo da aba ativa (somente o texto) */
+.toolOption.active {
+    color: #fff; /* Cor do texto quando ativo */
+}
+
+/* O "Highlight" que se move */
+.optionHighlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* 50% porque temos 2 opções. Se tivesse 3, seria 33.33% */
+    width: 96px;
+    height: 100%;
+    padding: 12px 0;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+
+    background-color: rgb(30, 30, 30); /* Cor do highlight */
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    /* Animação suave */
+    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 1;
+}
+
+.toolsContent {
+    background: rgb(30, 30, 30);
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+
+    padding: 16px;
+    z-index: 3;
+
+    overflow: hidden;
+}
+
+.toolsContentWrapper {
+    display: flex;
+    height: 100%;
+    width: 200%;
+    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.toolCategory {
+    list-style: none;
+    padding: 0;
+
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.toolCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    transition: transform 0.25s ease;
+}
+
+.toolCard:hover {
+    transform: scale(1.1);
+    transition: transform 0.25s ease;
+}
+
+.toolIcon {
+    height: 64px;
+    aspect-ratio: 1 / 1;
+     filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.5));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 64px;
+}
+
+.toolName {
+    color: white;
+    font-size: 12px;
+}

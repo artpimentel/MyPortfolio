@@ -1,0 +1,7 @@
+.sectionContent {
+    max-width: 960px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

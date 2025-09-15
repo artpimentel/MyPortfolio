@@ -1,0 +1,18 @@
+.langs {
+    height: 66%;
+    max-width: 960px;
+    padding: 16px;
+    
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.langs h2 {
+    font-family: 'TiltNeon', sans-serif;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}

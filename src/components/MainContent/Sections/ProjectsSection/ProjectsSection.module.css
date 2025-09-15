@@ -1,0 +1,96 @@
+.projectsSection {
+    background: rgb(30, 30, 30);
+}
+
+.sectionContent {
+    max-width: 960px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.sectionContent h2 {
+    color: white;
+    font-family: 'TiltNeon', sans-serif;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.projectsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    max-height: 80%;
+    overflow: hidden;
+
+    column-count: 3;
+    column-gap: 16px;
+}
+
+.project {
+    background: white;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    border-radius: 16px;
+
+    padding: 16px;
+    margin-bottom: 16px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: end;
+    justify-content: center;
+
+    break-inside: avoid;
+
+    font-family: TiltNeon;
+}
+
+.projectYear {
+    padding: 0;
+    margin: 0;
+
+    width: 100%;
+
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.projectTitle {
+    padding: 0;
+    margin: 0;
+
+    width: 100%;
+
+    font-size: 24px;
+    text-align: left;
+}
+
+.projectDescription {
+    padding: 0;
+
+    width: 100%;
+
+    font-size: 12px;
+    text-align: justify;
+    overflow-wrap: break-word;
+    text-wrap: break-word;
+    hyphens: auto;
+}
+
+.projectLink {
+    padding: 8px 12px;
+    margin: 0;
+
+    background: rgb(255, 0, 30);
+    border-radius: 16px;
+
+    color: white;
+    font-size: 12px;
+    text-decoration: none;
+}

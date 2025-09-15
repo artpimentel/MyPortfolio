@@ -1,0 +1,14 @@
+@font-face {
+    font-family: TiltNeon;
+    src: local(''),
+         url(/public/fonts/TiltNeon-Regular-VariableFont_XROT\,YROT.ttf);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
