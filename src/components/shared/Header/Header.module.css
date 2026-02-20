@@ -1,9 +1,8 @@
 .mainHeader {
-    background: rgba(255, 255, 255, 0.5);
     height: 10vh;
     width: 100%;
 
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(16px);
 
     position: fixed;
     z-index: 9999;
@@ -41,13 +40,13 @@
 }
 
 .githubIcon {
-    background: rgb(255, 0, 30);
-    color: white;
+    background: transparent;
+    color: rgb(255, 0, 30);
     font-size: 36px;
 }
 
 .linkedinIcon {
-    background: white;
+    background: transparent;
     color: rgb(255, 0, 30);
     font-size: 16px;
 }

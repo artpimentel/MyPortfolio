@@ -97,6 +97,7 @@
 
 
 .sectionContent {
+    height: 100vh;
     max-width: 960px;
     padding: 16px;
 

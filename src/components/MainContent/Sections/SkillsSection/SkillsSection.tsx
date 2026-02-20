@@ -7,12 +7,14 @@ import ToolsFooter from './components/ToolsFooter/ToolsFooter.tsx';
 function SkillsSection() {
     return (
         <Section id="skills">
-            <div className={styles.langs}>
-                <h2>Linguagens e Tecnologias</h2>
-                <SkillsFolder />
-            </div>
+            <div className={styles.sectionContent}>
+                <div className={styles.langs}>
+                    <h2>Linguagens e Tecnologias</h2>
+                    <SkillsFolder />
+                </div>
 
-            <ToolsFooter />
+                <ToolsFooter />
+            </div>
         </Section>
     );
 }

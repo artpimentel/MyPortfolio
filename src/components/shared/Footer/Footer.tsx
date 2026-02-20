@@ -2,8 +2,8 @@ import styles from './Footer.module.css';
 
 function Footer() {
     return (
-        <footer className={styles.mainFooter}>
-
+        <footer className={styles.footer}>
+            
         </footer>
     )
 }

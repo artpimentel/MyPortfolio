@@ -7,7 +7,6 @@ const navLinks = [
     { href:'#personal', label:'Pessoal' },
     { href:'#skills', label:'Competências' },
     { href:'#projects', label:'Projetos' },
-    { href:'#contacts', label:'Contatos' },
 ];
 
 function Header() {

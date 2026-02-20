@@ -1,7 +1,173 @@
 .sectionContent {
+    height: 100vh;
     max-width: 960px;
 
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.stationSelector {
+    flex: 0 0 50%;
+    height: 100%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.stationOptions {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    z-index: 10;
+}
+
+.stationOption {
+    background: rgb(255, 0, 30);
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 12px;
+    border: solid 2px rgb(255, 0, 30);
+    outline: none;
+
+    color: white;
+    font-family: TiltNeon;
+    text-wrap: nowrap;
+
+    cursor: pointer;
+}
+
+.stationOption:disabled {
+    background: transparent;
+    border: solid 2px rgb(255, 0, 30);
+
+    color: rgb(255, 0, 30);
+
+    cursor: not-allowed;
+}
+
+.stationContent {
+    flex: 0 0 50%;
+    padding-inline: 10%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+
+    font-family: TiltNeon;
+}
+
+.stationContent h3 {
+    padding: 0;
+    margin: 0;
+
+    color: rgb(255, 0, 30);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.stationContent p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: justify;
+    overflow-wrap: break-word;
+    text-wrap: break-word;
+    hyphens: auto;
+
+    cursor: default;
+}
+
+.textFadeOut {
+    transform: translate(0, -50px);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.textFadeIn {
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.deco {
+    flex: 0 0 50%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trainTrack {
+    height: 800px;
+    width: 800px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    position: absolute;
+
+    mask: radial-gradient(circle at center, white 40%, transparent 45%);
+}
+
+.trainTrack svg {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+}
+
+.trainIcon {
+    z-index: 1;
+}
+
+.stationStatic {
+    transform: translate(0, 0);
+}
+
+.transitionGroup {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.mapIn {
+  animation: mapIn 2.5s ease-in-out forwards;
+}
+
+.mapOut {
+  animation: mapOut 2.5s ease-in-out forwards;
+}
+
+@keyframes mapIn {
+  0% {
+    transform: translate(var(--translateX), calc(var(--translateX) * 0.57735026919));
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes mapOut {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(calc(-1 * var(--translateX)), calc(-1 * var(--translateX) * 0.57735026919));
+  }
 }
